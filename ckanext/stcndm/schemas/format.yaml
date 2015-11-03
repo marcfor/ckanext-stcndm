@@ -52,10 +52,10 @@ dataset_fields:
   validators: format_create_name
     not_empty unicode name_validator package_name_validator
 
-- field_name: notes
+- field_name: notes_translated
   preset: ndm_description
 
-- field_name: url
+- field_name: url_translated
   preset: ndm_fluent_url
 
 - field_name: isbn_number

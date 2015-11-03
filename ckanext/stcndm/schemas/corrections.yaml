@@ -30,7 +30,7 @@ dataset_fields:
 - field_name: correction_impact_level_code
   preset: ndm_correction_impact_level
 
-- field_name: notes
+- field_name: notes_translated
   preset: ndm_description
   label:
     en: Correction Note

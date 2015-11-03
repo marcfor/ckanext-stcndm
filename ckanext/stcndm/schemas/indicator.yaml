@@ -73,7 +73,7 @@ dataset_fields:
   schema_multivalued: false
   schema_extras: true
 
-- field_name: notes
+- field_name: notes_translated
   preset: ndm_description
 
 - field_name: display_order
@@ -116,7 +116,7 @@ dataset_fields:
   schema_multivalued: true
   schema_extras: true
 
-- field_name: title
+- field_name: title_translated
   preset: ndm_title
 
 - field_name: display_code
@@ -131,8 +131,5 @@ dataset_fields:
 - field_name: last_release_date
   preset: ndm_last_release_date
 
-- field_name: url
-  label:
-    en: URL
-    fr: URL
+- field_name: url_translated
   preset: ndm_fluent_url

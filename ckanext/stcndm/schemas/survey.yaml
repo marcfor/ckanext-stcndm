@@ -63,7 +63,7 @@ dataset_fields:
 - field_name: content_type_codes
   preset: ndm_content_type_codes
 
-- field_name: notes
+- field_name: notes_translated
   preset: ndm_description
 
 - field_name: feature_weight
@@ -142,8 +142,8 @@ dataset_fields:
 - field_name: survey_owner_code
   preset: ndm_survey_owner
 
-- field_name: title
+- field_name: title_translated
   preset: ndm_title
 
-- field_name: url
+- field_name: url_translated
   preset: ndm_fluent_url

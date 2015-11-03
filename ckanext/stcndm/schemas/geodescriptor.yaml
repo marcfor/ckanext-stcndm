@@ -29,7 +29,7 @@ dataset_fields:
 - field_name: product_id_old # 10uid_bi_strs
   preset: ndm_product_id_old
 
-- field_name: title # tmsgcname_en_tmtxtm tmsgcname_fr_tmtxtm
+- field_name: title_translated # tmsgcname_en_tmtxtm tmsgcname_fr_tmtxtm
   preset: ndm_title
 
 - field_name: geolevel_codes # tmsgccode_bi_tmtxtm

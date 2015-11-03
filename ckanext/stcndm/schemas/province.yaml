@@ -35,7 +35,7 @@ dataset_fields:
   validators: province_create_name
     not_empty unicode name_validator package_name_validator
 
-- field_name: title  # codeset label
+- field_name: title_translated  # codeset label
   preset: ndm_title
 
 - field_name: geotype
