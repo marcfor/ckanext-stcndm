@@ -39,7 +39,7 @@ while i < n:
             u'private': False,
             u'type': u'province',
             u'geolevel': line.get('tmprovgeolevel_bi_tmtxtm', ''),
-            u'title': {
+            u'title_translated': {
                 u'en': line.get('tmprovgeoname_en_tmtxtm', ''),
                 u'fr': line.get('tmprovgeoname_fr_tmtxtm', '')
             },

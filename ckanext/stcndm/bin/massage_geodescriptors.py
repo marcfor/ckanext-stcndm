@@ -39,7 +39,7 @@ while i < n:
             u'private': False,
             u'type': u'geodescriptor',
             u'product_id_old': line.get('10uid_bi_strs', ''),
-            u'title': {
+            u'title_translated': {
                 u'en': line.get(u'tmsgcname_en_tmtxtm', ''),
                 u'fr': line.get(u'tmsgcname_fr_tmtxtm', ''),
             },

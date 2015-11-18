@@ -47,7 +47,7 @@ while i < n:
         if 'tmtaxsubj_fr_tmtxtm' in line and line['tmtaxsubj_fr_tmtxtm']:
             temp[u'fr'] = line['tmtaxsubj_fr_tmtxtm']
         if temp:
-            line_out['title'] = temp
+            line_out['title_translated'] = temp
 
         temp = {}
         if 'tmtaxdescription_en_tmtxts' in line and line['tmtaxdescription_en_tmtxts']:
@@ -55,7 +55,7 @@ while i < n:
         if 'tmtaxdescription_fr_tmtxts' in line and line['tmtaxdescription_fr_tmtxts']:
             temp[u'fr'] = line['tmtaxdescription_fr_tmtxts']
         if temp:
-            line_out['notes'] = temp
+            line_out['notes_translated'] = temp
 
         if 'tmtaxsubjcode_bi_tmtxtm' in line:
             line_out['subject_code'] = line['tmtaxsubjcode_bi_tmtxtm']

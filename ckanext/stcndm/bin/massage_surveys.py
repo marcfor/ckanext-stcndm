@@ -119,7 +119,7 @@ while i < n:
             u'collection_end_date': line.get(u'collenddate_bi_strs', ''),
             u'collection_start_date': line.get(u'collstartdate_bi_strs', ''),
             u'collection_method_codes': code_lookup(u'collmethod_en_txtm', line, collection_method_list),
-            u'notes': {
+            u'notes_translated': {
                 u'en': line.get(u'description_en_txts', ''),
                 u'fr': line.get(u'description_fr_txts', '')
             },
@@ -155,11 +155,11 @@ while i < n:
             },
             u'survey_participation_code': safe_get(code_lookup(u'surveyparticipation_en_strs', line, survey_participation_list)),
             u'survey_owner_code': safe_get(code_lookup(u'survowner_en_strs', line, survey_owner_list)),
-            u'title': {
+            u'title_translated': {
                u'en': line.get(u'title_en_txts', ''),
                u'fr': line.get(u'title_fr_txts', '')
             },
-            u'url': {
+            u'url_translated': {
                 u'en': line.get(u'url_en_strs', ''),
                 u'fr': line.get(u'url_fr_strs', '')
             },

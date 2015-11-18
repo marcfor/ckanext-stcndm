@@ -62,7 +62,7 @@ while i < n:
                 u'name': u'{0}-{1}'.format(codeset_type, code_value),
                 u'codeset_type': lookup[old_content_type],
                 u'codeset_value': code_value,
-                u'title': {
+                u'title_translated': {
                     u'en': english_value,
                     u'fr': french_value
                 },

@@ -47,7 +47,7 @@ while i < n:
             'fr': line.get('url_fr_instrs', '')
         }
         if url_dict['en'] or url_dict['fr']:
-            product_out['url'] = url_dict
+            product_out['url_translated'] = url_dict
         print json.dumps(product_out)
 
         # release_out = do_release(line)
