@@ -13,6 +13,31 @@ import re
 import ckan.lib.navl.dictization_functions as df
 import ckanapi
 
+from ckanext.scheming.validation import (
+        scheming_validator, validators_from_string)
+from ckanext.fluent.validators import fluent_text_output
+
+LANG_SUFFIX = '_translated'
+
+@scheming_validator
+def fluent_core_translated_transitional_output(field, schema):
+    assert field['field_name'].endswith(LANG_SUFFIX), ('Output validator '
+        '"fluent_core_translated" must only used on a field that ends with '
+        '"_translated"')
+
+    def validator(key, data, errors, context):
+        """
+        Return a value for a core field using a multilingual dict.
+        """
+        data[key] = fluent_text_output(data[key])
+
+        k = key[-1]
+        new_key = key[:-1] + (k[:-len(LANG_SUFFIX)],)
+
+        if new_key in data:
+            data[new_key] = data[key]
+
+    return validator
 
 def safe_name(name):
     return re.sub(r"[^a-zA-Z0-9\-_]", "_", name)

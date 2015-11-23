@@ -280,6 +280,7 @@ class STCNDMPlugin(p.SingletonPlugin):
             "shortcode_output": validators.shortcode_output,
             "subject_create_name": validators.subject_create_name,
             "survey_create_name": validators.survey_create_name,
+            "fluent_core_translated_transitional_output": validators.fluent_core_translated_transitional_output
         }
 
     def get_helpers(self):
