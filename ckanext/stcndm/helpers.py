@@ -357,7 +357,7 @@ def lookup_label(field_name, field_value, lookup_type):
         if not results[u'count']:
             return default
 
-        result = results[u'results'][-1][u'title']
+        result = results[u'results'][-1][u'title_translated']
         if isinstance(result, basestring):
             try:
                 result = ast.literal_eval(result)
@@ -378,7 +378,7 @@ def lookup_label(field_name, field_value, lookup_type):
         if not results[u'count']:
             return default
 
-        result = results[u'results'][-1][u'title']
+        result = results[u'results'][-1][u'title_translated']
         if isinstance(result, basestring):
             try:
                 result = ast.literal_eval(result)

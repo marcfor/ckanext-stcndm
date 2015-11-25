@@ -718,7 +718,7 @@ def register_data_product(context, data_dict):
         'owner_org': 'statcan',
         'product_id_new': product_id,
         'top_parent_id': cube_id,
-        'title': title,
+        'title_translated': title,
         'product_type_code': product_type
     })
 
@@ -792,7 +792,7 @@ def register_non_data_product(context, data_dict):
         u'product_id_new': product_id,
         u'parent_product': parent_product,
         u'top_parent_id': parent_product,
-        u'title': title,
+        u'title_translated': title,
         u'name': u'{product_type}-{product_id}'.format(
             product_type=product_type,
             product_id=product_id

@@ -177,7 +177,7 @@ def register_cube(context, data_dict):
         product_id_new=product_id,
         product_type_code=product_type_dict['product_type_code'],
         subject_codes=[subject_code],
-        title={
+        title_translated={
             'en': title_en,
             'fr': title_fr,
         },

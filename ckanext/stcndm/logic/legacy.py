@@ -221,7 +221,7 @@ def register_legacy_non_data_product(context, data_dict):
         u'product_type_code': product_type,
         u'product_id_new': product_id_new,
         u'parent_product': parent_product,
-        u'title': title,
+        u'title_translated': title,
         u'top_parent_id': parent_product,
         u'name': u'{dataset_type}-{product_id}'.format(
             dataset_type=dataset_type,

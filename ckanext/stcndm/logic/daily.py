@@ -187,7 +187,7 @@ def register_daily(context, data_dict):
         'owner_org': 'statcan',
         'private': False,
         'type': 'daily',
-        'title': product_title,
+        'title_translated': product_title,
         'product_id_new': product_id,
         'product_type_code': '24',
         'last_publish_status_code': last_publish_status_code,
