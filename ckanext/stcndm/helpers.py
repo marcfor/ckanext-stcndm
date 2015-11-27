@@ -296,6 +296,11 @@ def codeset_choices(codeset_type):
     """
     Return a dictionary of {codeset_value: title} for the codeset_type
     passed
+
+    :param codeset_type: codeset type for which to return values and labels
+    :type codeset_type: str
+
+    :return dict
     """
 #    rc = ckanapi.RemoteCKAN('http://127.0.0.1:5000/')
     lc = ckanapi.LocalCKAN()
@@ -303,7 +308,8 @@ def codeset_choices(codeset_type):
         q='type:codeset',
         fq='codeset_type:' + codeset_type,
         rows=1000)
-    return dict((r['codeset_value'], r['title']) for r in results['results'])
+    return dict((r['codeset_value'], r.get('title_translated', r.get('title')))
+                for r in results['results'])
 
 
 def lookup_label(field_name, field_value, lookup_type):
@@ -357,7 +363,8 @@ def lookup_label(field_name, field_value, lookup_type):
         if not results[u'count']:
             return default
 
-        result = results[u'results'][-1][u'title_translated']
+        last_result = results[u'results'][-1]
+        result = last_result.get(u'title_translated', last_result.get(u'title'))
         if isinstance(result, basestring):
             try:
                 result = ast.literal_eval(result)
@@ -378,7 +385,8 @@ def lookup_label(field_name, field_value, lookup_type):
         if not results[u'count']:
             return default
 
-        result = results[u'results'][-1][u'title_translated']
+        last_result = results[u'results'][-1]
+        result = last_result.get(u'title_translated', last_result.get(u'title'))
         if isinstance(result, basestring):
             try:
                 result = ast.literal_eval(result)
